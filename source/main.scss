@@ -1,7 +1,15 @@
-@use '../source/config/reset';
-@use '../source/config/variaveis';
-@use '../source/config/header';
+$fontPrincipal: Roboto, sans-serif;
+$corDeFundo: #fff;
+$corDoHeader: #182C61;
+$corBotao: #44bd32;
+$corBotaoHover:#4cd137;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fontPrincipal;
+}
 
 
 @mixin container(){
@@ -11,18 +19,16 @@
 }
 
 
-
-
 .container {
    @include container(); 
 }
 
 
 body{
-   background-color: variaveis.$corDeFundo;
+   background-color: $corDeFundo;
 
    header{
-    background-color:variaveis.$corHeader;
+    background-color: $corDoHeader;
     position: sticky;
     top: 0;
     left: 0;
@@ -81,7 +87,7 @@ body{
     
       .product-button {
           display: block;
-          background-color:variaveis.$corBotao;
+          background-color:$corBotao;
           color: #fff;
           text-align: center;
           padding: 8px 0;
@@ -91,7 +97,7 @@ body{
         }
 
       .product-button:hover {
-            background-color: variaveis.$corBotaoHover ;
+            background-color: $corBotaoHover ;
            }
          
                 
